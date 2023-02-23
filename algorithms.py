@@ -1,5 +1,5 @@
 numbers_list = [35,8,64,46,45,54,123,75,46,35]
-
+best_people_list = ["JJ", "Megan", "Brett", "Dan", "Dan", "Nevin"]
 
 # Task 1: Even or Odd
 
@@ -33,4 +33,30 @@ def is_under_100(given_list):
 
 one_hundred_check = is_under_100(numbers_list)
 
-print(one_hundred_check)
+#print(one_hundred_check)
+
+# Task 3: Repeated Names
+
+# Will return true if there are any name repeats in the given_list
+        # The proper Big O Notation is going to be O(n^2)
+def is_multiple_names(given_list):
+    name_repeat = False
+    index = 0
+    count = index + 1
+
+    for name in given_list:
+        while count < len(given_list):
+            if name == given_list[count]:
+                name_repeat = True
+                return name_repeat
+            count += 1
+        index += 1
+        count = index + 1
+
+    return name_repeat
+
+
+does_name_repeat = is_multiple_names(best_people_list)
+
+print(does_name_repeat)
+
