@@ -58,5 +58,19 @@ def is_multiple_names(given_list):
 
 does_name_repeat = is_multiple_names(best_people_list)
 
-print(does_name_repeat)
+#print(does_name_repeat)
 
+# Task 4: Sort List
+
+# The Big O Notation is O(n^2)
+def bubble_sort(given_list):
+
+    for current_item in range(len(given_list)):
+        for compared_item in range(len(given_list) -1, current_item, -1):
+            if given_list[compared_item] < given_list[compared_item - 1]:
+                temp_number               = given_list[compared_item]
+                given_list[compared_item] = given_list[current_item]
+                given_list[current_item]  = temp_number
+        
+print(numbers_list)
+bubble_sort(numbers_list)
